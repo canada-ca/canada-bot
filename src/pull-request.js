@@ -1,4 +1,5 @@
 const GitHub = require('github-api');
+const retry = require('./retry');
 const gh_token = process.env.GH_TOKEN || false;
 
 module.exports = class PullRequest {
@@ -58,7 +59,7 @@ module.exports = class PullRequest {
             })
             .then(() => {
                 console.log('Create branch...');
-                return this._createBranch()
+                return retry(() => this._createBranch(), [], 5, 1000);
             })
             .then(() => {
                 console.log('Set commit SHA...');
