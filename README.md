@@ -54,3 +54,32 @@ You can also run PRB0t with Docker! Just run
 ``` bash
 docker run -p3000:3000 -e GH_TOKEN={YOUR GITHUB TOKEN} jrewerts/prb0t:latest
 ```
+
+## Development
+
+This project uses Node.js and the Micro framework. To get started
+
+1. Clone this repository.
+
+``` bash
+git clone https://github.com/canada-ca/canada-bot
+```
+
+2. From within the newly cloned repo, install dependencies.
+
+``` bash
+npm install
+```
+
+3. Set the environment variable `GH_TOKEN` to your accounts personal access token. For more info on PATs, see [here](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line).
+
+###### On Mac/Linux
+``` bash
+export GH_TOKEN=YOUR_TOKEN
+```
+
+4. Run CanadaBot.
+
+```bash
+npm run dev
+```
