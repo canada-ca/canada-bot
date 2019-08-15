@@ -57,10 +57,6 @@ module.exports = class PullRequest {
                 return this._setBranch();
             })
             .then(() => {
-                console.log('Update the fork to the default branch...');
-                return this._updateForkDefaultBranch();
-            })
-            .then(() => {
                 console.log('Create branch...');
                 return this._createBranch()
             })
@@ -154,29 +150,6 @@ module.exports = class PullRequest {
     _deleteFork() {
 
         return this.fork.deleteRepo();
-
-    }
-
-    _updateForkDefaultBranch() {
-
-        return this.repo.getRef(`heads/${this.branch}`).then((ref) => {
-            return this.fork.getRef(`heads/${this.branch}`).then(forkRef => {
-
-                if (forkRef.data.object.sha !== ref.data.object.sha) {
-                    return this.fork.createPullRequest({
-                        title: `Update fork`,
-                        body: `Update fork`,
-                        base: this.branch,
-                        head: `${this.user}:${this.branch}`,
-                        maintainer_can_modify: false
-                    }).then(res => {
-                        return this.fork.mergePullRequest(res.data.number);
-                    }).catch(e => console.log(e.request, e.response.data.errors))
-                }
-
-                return true;
-            });
-        });
 
     }
 
