@@ -1,6 +1,6 @@
 {
   "name": "@prb0t/pr",
-  "main": "src/PullRequest.js",
+  "main": "src/index.js",
   "version": "1.0.0",
   "description": "Make PR on GitHub, with JSON description of changes",
   "now": {
@@ -12,7 +12,7 @@
   "scripts": {
     "heroku-postbuild": "npm run build",
     "build": "webpack",
-    "start": "micro -p ${PORT-3000} dist/micro.js",
+    "start": "micro -p ${PORT-3000}",
     "dev": "micro-dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
