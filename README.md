@@ -33,8 +33,8 @@ curl -X POST \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -d '{
-  "user": "canada-bot",
-  "repo": "arepo",
+  "user": "j-rewerts",
+  "repo": "trash",
   "description": "🤖",
   "title": "Review this",
   "commit": "a commit",
@@ -44,7 +44,7 @@ curl -X POST \
 }'
 ```
 
-Or [try it](https://codepen.io/j-rewerts/pen/NmbXPx) in your browser!
+Or [try it](https://codepen.io/jrewerts/pen/vYBGVyY) in your browser!
 
 Or [try it](https://www.getpostman.com/collections/e9b9deac7148e7dd0473) in Postman!
 
