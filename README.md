@@ -20,15 +20,6 @@ Request Sample:
 }
 ```
 
-Or [try it](https://www.getpostman.com/collections/e9b9deac7148e7dd0473) in Postman!
-
-### Docker
-
-You can also run PRB0t with Docker! Just run
-``` bash
-docker run -p3000:3000 -e GH_TOKEN={YOUR GITHUB TOKEN} jrewerts/prb0t:latest
-```
-
 ## What can you do with it?
 
 - If you have a static website hosted in github... you could add a button **Edit this page**.
@@ -54,3 +45,12 @@ curl -X POST \
 ```
 
 Or [try it](https://codepen.io/j-rewerts/pen/NmbXPx) in your browser!
+
+Or [try it](https://www.getpostman.com/collections/e9b9deac7148e7dd0473) in Postman!
+
+### Docker
+
+You can also run PRB0t with Docker! Just run
+``` bash
+docker run -p3000:3000 -e GH_TOKEN={YOUR GITHUB TOKEN} jrewerts/prb0t:latest
+```
