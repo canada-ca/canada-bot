@@ -152,7 +152,6 @@ module.exports = class PullRequest {
 
     _createBranch() {
 
-        console.log(this.branch + ' - ' + this.forkBranch);
         return this.fork.createBranch(this.branch, this.forkBranch);
 
     }
