@@ -15,7 +15,7 @@ function delay (func, ms) {
  * @param {Number} timeout The number of milliseconds to wait between attempts.
  * @return {Promise} The Promise either resolved or rejected.
  */
-module.exports = (attempt, args, numAttempts, timeout) => {
+let retry = (attempt, args, numAttempts, timeout) => {
     let error;
     let response;
     return attempt.apply(this, args).catch((err) => {
@@ -27,3 +27,5 @@ module.exports = (attempt, args, numAttempts, timeout) => {
         }
     });
 }
+
+module.exports = retry;
