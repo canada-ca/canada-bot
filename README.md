@@ -83,3 +83,7 @@ export GH_TOKEN=YOUR_TOKEN
 ```bash
 npm run dev
 ```
+
+## Deployment
+
+Updating CanadaBot is done automatically. Currently, it's hosted in [Heroku](https://dashboard.heroku.com/apps/canada-pr-bot). When `master` is changed, a new deploy is created.
