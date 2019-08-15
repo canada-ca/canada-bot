@@ -2,8 +2,7 @@ const path = require("path");
 
 module.exports = {
     entry: {
-        lambda: './src/handlers/lambda.js',
-        micro: './src/handlers/micro.js'
+        micro: './src/index.js'
     },
     output: {
         filename: '[name].js',
