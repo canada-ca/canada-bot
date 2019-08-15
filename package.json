@@ -10,11 +10,8 @@
     ]
   },
   "scripts": {
-    "heroku-postbuild": "npm run build",
-    "build": "webpack",
     "start": "micro -p ${PORT-3000}",
-    "dev": "micro-dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "micro-dev"
   },
   "repository": {
     "type": "git",
@@ -28,18 +25,9 @@
   },
   "homepage": "https://github.com/PRB0t/PRB0t#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.2",
-    "micro-dev": "^3.0.0",
-    "babel-preset-env": "^1.7.0",
-    "npm-run-all": "^4.1.2",
-    "webpack": "^4.33.0",
-    "webpack-cli": "^3.3.5",
-    "webpack-node-externals": "^1.6.0"
+    "micro-dev": "^3.0.0"
   },
   "dependencies": {
-    "babel-plugin-transform-runtime": "^6.23.0",
     "github-api": "^3.2.2",
     "micro-cors": "^0.1.1",
     "micro": "^9.0.2"
