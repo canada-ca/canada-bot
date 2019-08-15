@@ -1,4 +1,4 @@
-const PR = require('./../PullRequest').default;
+const PR = require('./pull-request');
 const {json} = require('micro');
 const origin = process.env.HOST_NAME || null;
 const microCors = require('micro-cors');
