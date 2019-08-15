@@ -136,13 +136,9 @@ module.exports = class PullRequest {
 
     _fork() {
 
-        return new Promise((resolve, reject) => {
-
-            return this.repo.fork().then(res => {
-                resolve(res);
-                this.fork = this.gh.getRepo(res.data.full_name);
-            }).catch(reject);
-
+        return this.repo.fork().then(res => {
+            this.fork = this.gh.getRepo(res.data.full_name);
+            return res;
         });
 
     }
