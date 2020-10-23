@@ -1,4 +1,4 @@
-FROM node:10-alpine as builder
+FROM node:15-alpine as builder
 
 WORKDIR /opt/prb0t
 # Handle dependencies first, so they're cached
@@ -9,7 +9,7 @@ RUN npm install
 ADD . /opt/prb0t
 RUN npm run build
 
-FROM node:10-alpine
+FROM node:15-alpine
 
 WORKDIR /opt/prb0t
 ADD ./package.json /opt/prb0t/package.json
